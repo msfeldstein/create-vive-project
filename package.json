@@ -1,0 +1,37 @@
+{
+  "name": "vive-boilerplate",
+  "version": "1.0.0",
+  "description": "Starting point for building vive WebVR experiences",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js -o -l -- -t glslify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msfeldstein/vive-boilerplate.git"
+  },
+  "keywords": [
+    "vive",
+    "webvr",
+    "vr"
+  ],
+  "author": "Michael Feldstein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msfeldstein/vive-boilerplate/issues"
+  },
+  "homepage": "https://github.com/msfeldstein/vive-boilerplate#readme",
+  "devDependencies": {
+    "budo": "^9.4.1",
+    "glslify": "^6.0.1"
+  },
+  "dependencies": {
+    "@msfeldstein/full-screen-canvas": "^1.0.1",
+    "budo": "^9.4.1",
+    "three": "^0.83.0",
+    "three-orbit-controls": "^82.1.0",
+    "three-vive-controller": "^1.4.1",
+    "tween.js": "^16.3.5"
+  }
+}
