@@ -20,6 +20,10 @@ Alternatively you can just download this repository install it manually if you d
 `npm install`
 `npm start`
 
+# Todo
+
+- Make a way to have prototypes publishable in one step to github pages or something
+
 # Suggestions
 
 Any ideas for things you think most prototypes would want, either submit an issue or tweet me at @msfeldstein
