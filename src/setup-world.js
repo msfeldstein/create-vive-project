@@ -18,21 +18,7 @@ var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
 directionalLight.position.set( 200, 200, 200 );
 scene.add( directionalLight );
 
-const renderCallbacks = []
-
-function animate(t) {
-  requestAnimationFrame(animate)
-  renderCallbacks.forEach((f) => f(t))
-  renderer.render(scene, camera)
-}
-requestAnimationFrame(animate)
-
-const addRenderCallback = function(cb) {
-  renderCallbacks.push(cb)
-}
-
 module.exports =  {
-  addRenderCallback,
   ambientLight,
   canvas,
   camera,

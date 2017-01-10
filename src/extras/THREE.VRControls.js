@@ -2,6 +2,8 @@
  * @author dmarcos / https://github.com/dmarcos
  * @author mrdoob / http://mrdoob.com
  */
+ 
+ console.log("HI?", THREE)
 
 THREE.VRControls = function ( object, onError ) {
 

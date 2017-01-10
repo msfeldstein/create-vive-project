@@ -84,16 +84,7 @@ module.exports = {
 		button.style.zIndex = '999';
 		button.textContent = 'ENTER VR';
 		button.onclick = function() {
-
 			effect.isPresenting ? effect.exitPresent() : effect.requestPresent();
-      if (effect.isPresenting) {
-        effect.exitPresent()
-        effect.setFullScreen(false)
-      } else {
-        effect.requestPresent();
-        effect.setFullScreen(true)
-      }
-
 		};
 
 		window.addEventListener( 'vrdisplaypresentchange', function ( event ) {
