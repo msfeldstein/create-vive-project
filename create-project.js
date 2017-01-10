@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fsx = require('fs-extra')
 var path = require('path')
 var exec = require('child_process').exec
