@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Starting point for building vive WebVR experiences",
   "main": "index.js",
+  "bin": "create-project.js",
   "scripts": {
     "start": "budo index.js -o -l -- -t glslify",
     "test": "echo \"Error: no test specified\" && exit 1"
