@@ -29,6 +29,11 @@ function main() {
   )
 
   fsx.copySync(
+    path.join(src, "index.js"),
+    "index.js"
+  )
+
+  fsx.copySync(
     path.join(src, "src"),
     "src"
   )

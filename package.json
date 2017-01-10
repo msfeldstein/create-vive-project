@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@msfeldstein/full-screen-canvas": "^1.0.1",
-    "budo": "^9.4.1",
     "fs-extra": "^1.0.0",
     "three": "^0.83.0",
     "three-orbit-controls": "^82.1.0",
