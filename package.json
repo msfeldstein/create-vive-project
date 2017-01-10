@@ -1,6 +1,6 @@
 {
   "name": "create-vive-project",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Starting point for building vive WebVR experiences",
   "main": "index.js",
   "bin": "create-project.js",
