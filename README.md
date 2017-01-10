@@ -1,6 +1,6 @@
 # create-vive-prototype
 
-create-vive-prototype is a boilerplate and command line utility to quickly create webvr prototypes using the HTC Vive and a WebVR enabled browser (or chrome with the [WebVR Emulator](https://chrome.google.com/webstore/detail/webvr-api-emulation/gbdnpaebafagioggnhkacnaaahpiefil?hl=en))
+create-vive-prototype is a boilerplate and command line utility to quickly create webvr prototypes using the HTC Vive and a WebVR enabled browser (or chrome with the [WebVR Emulator](https://chrome.google.com/webstore/detail/webvr-api-emulation/gbdnpaebafagioggnhkacnaaahpiefil?hl=en), highly highly recommended)
 
 Projects created with this will get:
 - Instant live reload
