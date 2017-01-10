@@ -3,7 +3,13 @@ var path = require('path')
 var exec = require('child_process').exec
 
 function main() {
-  var name = process.argv[1]
+  var args = process.argv
+  console.log(args[0])
+  if (args[0].indexOf("node") != -1) {
+    console.log("SHIFTING")
+    args.shift()
+  }
+  var name = args[1]
   if (!name) {
     console.error("Missing a project name")
     console.error("$ vive-boilerplate name-of-new-project")
