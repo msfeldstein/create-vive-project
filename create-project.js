@@ -1,8 +1,9 @@
 var fsx = require('fs-extra')
 var path = require('path')
 var exec = require('child_process').exec
+
 function main() {
-  var name = process.argv[2]
+  var name = process.argv[1]
   if (!name) {
     console.error("Missing a project name")
     console.error("$ vive-boilerplate name-of-new-project")
