@@ -12,12 +12,17 @@ Projects created with this will get:
 # Install
 
 `npm install -g create-vive-prototype`
+
 `create-vive-prototype YourNewProjectName`
+
 `cd YourNewProjectName`
+
 `npm start`
 
 Alternatively you can just download this repository install it manually if you don't want to install it globally
+
 `npm install`
+
 `npm start`
 
 # Todo
