@@ -1,33 +1,34 @@
 require('./extras/THREE.VRControls')
 require('./extras/THREE.VREffect')
+window.TWEEN = require('tween.js')
 const WEBVR = require('./extras/WebVR')
 
-module.exports = function(renderer, scene, camera) {
-  // VRControls handles mapping the HMD position and orientation to the threejs camera
-  const vrControls = new THREE.VRControls(camera)
-  // VREffect handles rendering and communicating with the HMD
-  const vrEffect = new THREE.VREffect(renderer)
-  if ( navigator.getVRDisplays ) {
-    document.body.appendChild( WEBVR.getButton( vrEffect ) );
-  }
+// VRControls handles mapping the HMD position and orientation to the threejs camera
+window.vrControls = new THREE.VRControls(camera)
+// VREffect handles rendering and communicating with the HMD
+window.vrEffect = new THREE.VREffect(renderer)
+if ( navigator.getVRDisplays ) {
+  document.body.appendChild( WEBVR.getButton( vrEffect ) );
+}
 
-  const renderCallbacks = []
+const renderCallbacks = []
 
-  function animate(t) {
-    TWEEN.update(t)
-    vrEffect.requestAnimationFrame(animate)
-    renderCallbacks.forEach((f) => f(t))
-    vrControls.update()
-    vrEffect.render(scene, camera)
-  }
+function animate(t, dt) {
+  console.log(dt)
+  TWEEN.update()
   vrEffect.requestAnimationFrame(animate)
+  renderCallbacks.forEach((f) => f(t))
+  vrControls.update()
+  vrEffect.render(scene, camera)
+}
+vrEffect.requestAnimationFrame(animate)
 
-  const addRenderCallback = function(cb) {
-    renderCallbacks.push(cb)
-  }
+window.addRenderCallback = function(cb) {
+  renderCallbacks.push(cb)
+}
 
-  return {
-    addRenderCallback,
-    vrControls
-  }
+module.exports = {
+  addRenderCallback,
+  vrControls,
+  vrEffect
 }

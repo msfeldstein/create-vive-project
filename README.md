@@ -27,6 +27,9 @@ npm install
 npm start
 ```
 
+You can also require the project in an existing project to set everything up.
+`require('create-vive-project')`
+
 # Todo
 
 - Make a way to have prototypes publishable in one step to github pages or something

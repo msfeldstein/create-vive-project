@@ -1,41 +1,7 @@
-window.USE_VR = true
-window.THREE = require('three')
-window.TWEEN = require('tween.js')
-const OrbitControls = require('three-orbit-controls')(THREE)
-const ViveController = require('three-vive-controller')(THREE)
-
-// Set up the standard threejs rig
-const {
-  canvas,
-  camera,
-  renderer,
-  scene
-} = require('./src/setup-world')
-
-// The render loop code manages all global updating, as well as gives us
-// a way to add render callbacks since callbacks are queued on the VR queue
-// It also sets up the VRControls and VREffect since you don't really need to use
-// it anywhere else.
-const {addRenderCallback, vrControls} =
-  require('./src/render-loop')(renderer, scene, camera)
-
-const controllers = [
-  new ViveController(0, vrControls),
-  new ViveController(1, vrControls)
-]
-window.controllers = controllers
-scene.add(controllers[0], controllers[1])
-
-if (!USE_VR) {
-  console.log("Install the WebVR Emulator from the chrome store")
-  camera.position.set(10, 10, 10)
-  camera.lookAt(new THREE.Vector3())
-  new OrbitControls(camera)
-}
-
-/**
-  * Put all your cool ideas below this line!!
-  **/
+// This will set everything up and make things available via
+// window.[scene, camera, renderer, canvas, addRenderLoop, TWEEN,
+// vrEffect, vrControls].  See setup.js to see what is available
+require('./src/setup')
 
 // Set up a random scene with a floor and a few cubes around, i dont know why
 require('./src/setup-scene')(scene, addRenderCallback)
@@ -44,6 +10,7 @@ require('./src/setup-scene')(scene, addRenderCallback)
 controllers.forEach((controller) => {
   // Every time you press the trigger, lets blow up a balloon
   controller.on(controller.TriggerClicked, () => {
+    console.log("Clicked")
     var bubble = new THREE.Mesh(
       new THREE.SphereBufferGeometry(.1, 32, 32),
       new THREE.MeshPhongMaterial({transparent: true})
