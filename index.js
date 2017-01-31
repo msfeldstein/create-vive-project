@@ -3,6 +3,13 @@
 // vrEffect, vrControls].  See setup.js to see what is available
 require('./src/setup')
 
+//
+//
+// Everything below this is your prototype!!  Go Nuts!
+//
+//
+
+
 // Set up a random scene with a floor and a few cubes around, i dont know why
 require('./src/setup-scene')(scene, addRenderCallback)
 
